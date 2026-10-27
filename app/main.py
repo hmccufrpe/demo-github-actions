@@ -37,3 +37,8 @@ def complete_task(task_id: int):
         raise HTTPException(status_code=404, detail="Task not found")
     task["done"] = True
     return task
+
+
+@app.get("/version")
+def version():
+    return {"version": "1.0"}
