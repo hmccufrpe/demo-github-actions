@@ -35,5 +35,5 @@ def complete_task(task_id: int):
     task = _tasks.get(task_id)
     if task is None:
         raise HTTPException(status_code=404, detail="Task not found")
-    task["done"] = True
+    task["done"] = False
     return task
