@@ -20,7 +20,7 @@ def health():
 def create_task(body: TaskIn):
     global _next_id
     task = {"id": _next_id, "title": body.title, "done": False}
-    _tasks[_next_id] = task
+    _tasks[_next_id] = tas
     _next_id += 1
     return task
 
